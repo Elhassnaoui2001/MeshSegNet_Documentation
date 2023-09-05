@@ -1,0 +1,13 @@
+site_name: Project-MeshSegNet
+site_url: https://example.com/
+
+markdown_extensions:
+  - codehilite:
+      code_background: #ffffff
+
+nav:
+  - Home: index.md
+  - Deployment: Deployment.md
+  - About: about.md
+
+theme: readthedocs
