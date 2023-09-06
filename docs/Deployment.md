@@ -121,7 +121,14 @@ et en fin la fonction  `scrollToVis ` : Cette fonction fait défiler la page ver
 vis.js : Un composant chargé pour la visualisation des données résultantes de la prédiction, en utilisant la bibliothèque vtk.js à partir des données reçues.
            
  En résumé, ce composant  offre des fonctionnalités pour personnaliser la visualisation, ajuster les paramètres de représentation,  à l'aide de divers fonction telle que **createViewer** , **createPipeline** , **updateRepresentation**
-            ** , **updateOpacity** ..
+            ** , **updateOpacity** .. :
+
+            1- `createViewer`: Cette fonction a pour but de créer un conteneur pour la visualisation en utilisant la fonction vtkFullScreenRenderWindow de la bibliothèque vtk.js. 
+
+             2- `createPipeline`:  Cette fonction est responsable de la création du pipeline de visualisation. Cela implique le chargement des données résultantes de la prédiction, la création d'une table de correspondance des couleurs.
+
+            1- `updateOpacity `: Cette fonction permet à l'utilisateur de régler l'opacité de la visualisation. Cela peut être utile pour ajuster la transparence des objets visualisés.. 
+            
 
 
 ### 2.Interface Utilisateur
