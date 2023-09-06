@@ -125,9 +125,9 @@ vis.js : Un composant chargé pour la visualisation des données résultantes de
 
             1- `createViewer`: Cette fonction a pour but de créer un conteneur pour la visualisation en utilisant la fonction vtkFullScreenRenderWindow de la bibliothèque vtk.js. 
 
-             2- `createPipeline`:  Cette fonction est responsable de la création du pipeline de visualisation. Cela implique le chargement des données résultantes de la prédiction, la création d'une table de correspondance des couleurs.
+            2- `createPipeline`:  Cette fonction est responsable de la création du pipeline de visualisation. Cela implique le chargement des données résultantes de la prédiction, la création d'une table de correspondance des couleurs.
 
-            1- `updateOpacity `: Cette fonction permet à l'utilisateur de régler l'opacité de la visualisation. Cela peut être utile pour ajuster la transparence des objets visualisés.. 
+            3- `updateOpacity `: Cette fonction permet à l'utilisateur de régler l'opacité de la visualisation. Cela peut être utile pour ajuster la transparence des objets visualisés.. 
             
 
 
