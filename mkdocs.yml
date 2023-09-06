@@ -1,12 +1,9 @@
 site_name: Project-MeshSegNet
+site_url: https://github.com/Elhassnaoui2001/MeshSegNet_Documentation
 
-markdown_extensions:
-  - codehilite:
-      code_background: #ffffff
-
+theme: readthedocs
 nav:
   - Home: index.md
   - Deployment: Deployment.md
   - About: about.md
-
-theme: readthedocs
+  - FAQ : FAQ.md
