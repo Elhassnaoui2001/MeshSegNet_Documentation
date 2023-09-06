@@ -1,5 +1,5 @@
 site_name: Project-MeshSegNet
-
+site-url: https://ia6dam.github.io/Documentation-MeshSegNet_/
 theme: readthedocs
 nav:
   - Home: index.md
