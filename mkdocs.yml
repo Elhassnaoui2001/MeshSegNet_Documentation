@@ -1,9 +1,7 @@
 site_name: Project-MeshSegNet
 site_url: https://github.com/Elhassnaoui2001/MeshSegNet_Documentation
-
 theme: readthedocs
 nav:
   - Home: index.md
   - Deployment: Deployment.md
   - About: about.md
-  - FAQ : FAQ.md
