@@ -56,10 +56,97 @@ Installer(.msi) ou macOS Installer(.pkg), puis terminer le processus d' installa
 
 Pour lancer le serveur Frontend, il faut accéder au dossier de fronted et exécuter la
 commande `npm start`.
-## Frontend 
+## Frontend
+Cette partie est consacré pour entammer la prtie Fontend de notre projet pour aider mieux à sa comprehension
+### 1.Structure du Frontend
 
-### Structure du Frontend 
-### Interface Utilisateur
+l'arbrorescente du Frontend est la suivante:
+
+
+  ![Image title](arbore.png)
+  
+
+#### Vue d'ensemble
+-node modules: 
+  Ce répertoire contient toutes les dépendances externes installées pour le projet à l'aide de npm ou yarn. 
+      ``` 
+       npm install
+     ```
+
+-public: 
+Ce répertoire contient les fichiers statiques et publics du projet, tels que les fichiers HTML de base.
+
+
+-src: 
+C'est le répertoire principal du projet contenant le code source.
+
+assets: Ce répertoire contient des fichiers statiques utilisés dans l'application, tels que les polices (font) et les images (img).
+
+components: Ce répertoire contient des composants React réutilisables utilisés pour construire l'interface utilisateur de l'application.
+
+About.js: Un composant qui affiche des informations sur l'application ou l'équipe derrière le projet.
+
+Banner.js: Un composant qui affiche  un texte  et une image animé. 
+
+Card.js: Un composant qui représente une carte ou un élément de contenu pouvant être utilisé pour afficher des informations.
+
+Contact.js: Un composant qui affiche un formulaire pour contacter l'équipe de développement.
+
+Footer.js : Un composant qui représente le pied de page de l'application, généralement avec des liens et des informations de copyright.
+
+NavBar.js: Un composant qui représente la barre de navigation de l'application, généralement avec des liens vers les différentes sections du site.
+
+Prediction.js: Un composant qui permet à l'utilisateur de télécharger un fichier, de le téléverser vers un serveur, d'obtenir une prédiction, de télécharger le résultat et d'afficher le résultat avec le composant Vis.
+
+Qui utilise le Hooks `UseState` pour gérer plusieurs états, tels que selectedFile, predictionSuccess, predictionMessage, etc. Ces états sont utilisés pour suivre et mettre à jour l'état de la prédiction.
+            Dans ce composant il existe 3 fonctions fondamentales :
+
+               1- `HandleFileChange`: appelé lorsque l'utilisateur sélectionne le fichier a segmenté et elle met à jour l'état `selectedFile` avec le fichier sélectionné.
+
+               2- `HandleUpload `:est appelée lorsque l'utilisateur clique sur le bouton "Predict". Elle envoie le fichier téléchargé vers un serveur distant à l'aide d'une requête HTTP POST en utilisant la bibliothèque axios
+
+
+                ``` 
+                  const response = await axios.post('http://127.0.0.1:5000/predict', formData, {
+                 responseType: 'blob',
+                  });
+              //  En cas de réussite, elle met à jour les états predictionSuccess, predictionMessage, et predictionFileURL pour afficher le résultat de la prédiction.
+                 ```
+
+              3- `handleDownload`: appelée lorsque l'utilisateur clique sur le bouton "Download the VTP file". Elle permet de télécharger le fichier résultant de la prédiction.
+
+et en fin la fonction  `scrollToVis ` : Cette fonction fait défiler la page vers le composant Vis qui affiche la visualisation résultante à l'aide de VTk.js
+                  
+            
+vis.js : Un composant chargé pour la visualisation des données résultantes de la prédiction, en utilisant la bibliothèque vtk.js à partir des données reçues.
+           
+ En résumé, ce composant  offre des fonctionnalités pour personnaliser la visualisation, ajuster les paramètres de représentation,  à l'aide de divers fonction telle que **createViewer** , **createPipeline** , **updateRepresentation**
+            ** , **updateOpacity** ..
+
+
+### 2.Interface Utilisateur
+
+##### Page d'Accueil
+
+  ![Image title](accuiel.png)
+  
+
+##### Page d'informations
+ 
+  ![Image title](info.png)
+
+  ![Image title](info1.png)
+
+##### Page de contact
+
+  ![Image title](contact.png)
+
+
+##### Page de Segmentation.
+
+  ![Image title](predict.png)
+  
+  
 
 
 
