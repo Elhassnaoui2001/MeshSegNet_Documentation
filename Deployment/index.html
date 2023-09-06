@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/Elhassnaoui2001/MeshSegNet_Documentation/Deployment/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Deployment - Project-MeshSegNet</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Deployment";
+        var mkdocs_page_input_path = "Deployment.md";
+        var mkdocs_page_url = "/Elhassnaoui2001/MeshSegNet_Documentation/Deployment/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Project-MeshSegNet
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Deployment</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#fonctionnalites-du-projet">Fonctionnalités du Projet</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#technologies-utilisees">Technologies Utilisées</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configuration-et-installation">Configuration et Installation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-configuration-de-lenvironnement-virtuel">1. Configuration de l'environnement virtuel</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#-installation-de-loutil-virtualenv">-Installation de l'outil  virtualenv:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#-creation-de-lenvironnement-virtuel">-Création de l'environnement virtuel:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#-activation-de-lenvironnement-virtuel">-Activation de l'environnement virtuel:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-installation-backend">2. Installation Backend</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#-installation-de-flask">-Installation de Flask:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#-installation-des-dependances-python">-Installation des dépendances Python:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-installation-frontend">3. Installation Frontend</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#-installation-de-nodejs-et-npm">- Installation de Node.js et npm</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#frontend">Frontend</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#structure-du-frontend">Structure du Frontend</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#interface-utilisateur">Interface Utilisateur</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#backend">Backend</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#structure-du-backend">Structure du Backend</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#api-pour-la-prediction">API pour la Prédiction</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#visualisation-3d-avec-vtkjs">Visualisation 3D avec VTK.js</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Project-MeshSegNet</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">Deployment</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="welcome-to-our-documentation-for-deployment">Welcome to Our documentation for Deployment</h1>
+<h2 id="fonctionnalites-du-projet">Fonctionnalités du Projet</h2>
+<p>La partie de déploiement de notre projet est une étape cruciale pour réaliser des prédictions sur des objets 3D au format .vtp ou .obj et les visualiser dans notre site web. Cette phase est le pivot central de notre système, permettant aux utilisateurs de tirer pleinement parti de la technologie 3D pour une expérience enrichissante.</p>
+<p>Notre objectif principal est d'offrir aux utilisateurs la capacité de télécharger des fichiers 3D, de les soumettre à un processus de prédiction, puis de visualiser les résultats de manière interactive sur notre site web. Pour atteindre cet objectif, nous avons mis en place une architecture en deux parties : le backend et le frontend.</p>
+<p><strong>La partie backend</strong> : assure le traitement des données, y compris la prédiction à l'aide du modèle MeshSegNet.</p>
+<p><strong>la partie frontend</strong> :offre une interface conviviale pour les utilisateurs</p>
+<h2 id="technologies-utilisees">Technologies Utilisées</h2>
+<h2 id="configuration-et-installation">Configuration et Installation</h2>
+<h3 id="1-configuration-de-lenvironnement-virtuel">1. Configuration de l'environnement virtuel</h3>
+<p>Un environnement virtuel est un environnement Python isolé qui permet de gérer les
+dépendances spécifiques à un projet sans interférer avec d'autres projets Python sur le
+même système. Voici comment créer et configurer un environnement virtuel pour votre
+projet:</p>
+<h4 id="-installation-de-loutil-virtualenv"><strong>-Installation de l'outil  <code>virtualenv</code>:</strong></h4>
+<p>Si vous n'avez pas déjà virtualenv installé sur votre système, vous pouvez l'installer en utilisant pip, qui est l'outil de gestion de paquets Python.
+Ouvrez un terminal et exécutez la commande suivante :
+<code>pip install virtualenv</code></p>
+<h4 id="-creation-de-lenvironnement-virtuel"><strong>-Création de l'environnement virtuel:</strong></h4>
+<p>Dans le répertoire racine de votre projet, créez
+un environnement virtuel en utilisant virtualenv.
+Remplacez <strong>nom_env</strong> par le nom que vous
+souhaitez donner à votre environnement virtuel : virtualenv nom_env. Cela créera un dossier
+avec le nom de votre environnement virtuel contenant une installation Python propre et
+isolée</p>
+<h4 id="-activation-de-lenvironnement-virtuel"><strong>-Activation de l'environnement virtuel:</strong></h4>
+<p>Après avoir créé l'environnement virtuel, vous
+devez l'activer. Selon votre système d'exploitation, la commande d'activation varie.<br>
+<strong>Sur Windows: <code>nom_env\Scripts\activate.</code></strong><br>
+<strong>Sur macOS ou Linux: <code>source nom_env/bin/activate</code></strong></p>
+<h3 id="2-installation-backend">2. Installation Backend</h3>
+<h4 id="-installation-de-flask"><strong>-Installation de Flask:</strong></h4>
+<p>Dans l'environnement virtuel activé avant, utiliser lacommande suivante pour installer flask: <code>pip install flask</code></p>
+<h4 id="-installation-des-dependances-python"><strong>-Installation des dépendances Python:</strong></h4>
+<p>Utilisez pip pour installer les packages
+Python nécessaires. Dans ce contexte, vous aurez probablement besoin de packages tels
+que <strong>Flask</strong>, <strong>NumPy</strong>, <strong>Torch</strong>, <strong>vedo</strong>, <strong>Pandas</strong>, <strong>Spicy</strong>... Exemple: <code>pip install flask numpy torch</code>.</p>
+<p>Pour lancer le serveur Backend, il faut accéder au dossier de backend, et puis exécuter la
+commande <code>python app.py</code></p>
+<h3 id="3-installation-frontend">3. Installation Frontend</h3>
+<h4 id="-installation-de-nodejs-et-npm"><strong>- Installation de Node.js et npm</strong></h4>
+<p>Premièrement, il faut télécharger le fichier Windows
+Installer(.msi) ou macOS Installer(.pkg), puis terminer le processus d' installation et la lancer.</p>
+<p>Pour lancer le serveur Frontend, il faut accéder au dossier de fronted et exécuter la
+commande <code>npm start</code>.</p>
+<h2 id="frontend">Frontend</h2>
+<h3 id="structure-du-frontend">Structure du Frontend</h3>
+<h3 id="interface-utilisateur">Interface Utilisateur</h3>
+<h2 id="backend">Backend</h2>
+<h3 id="structure-du-backend">Structure du Backend</h3>
+<h3 id="api-pour-la-prediction">API pour la Prédiction</h3>
+<h2 id="visualisation-3d-avec-vtkjs">Visualisation 3D avec VTK.js</h2>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
